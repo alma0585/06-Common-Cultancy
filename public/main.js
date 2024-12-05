@@ -18,8 +18,21 @@ document.addEventListener('DOMContentLoaded', () => {
         timeline.appendChild(newItem);
     }
 
+    function fetchData() {
+       fetch("http://localhost:3000/data")
+           .then(response => response.json())
+           .then(data => {
+                console.log(data)
+
+           })
+
+    }
+
+    fetchData()
+
     // Tilføj en ny begivenhed efter 3 sekunder
     setTimeout(() => {
         addTimelineEvent(2030, 'År 2030', 'Fremtidens æra begynder!');
     }, 3000);
+
 });
