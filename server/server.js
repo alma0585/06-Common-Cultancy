@@ -13,7 +13,7 @@ const connection = db.createConnection({
     host: "localhost",
     user: "root",
     password: process.env.dbpassword,
-    database: "ccdb"
+    database: process.env.dbname
 });
 
 
