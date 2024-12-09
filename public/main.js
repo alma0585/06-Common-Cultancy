@@ -18,12 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
         timeline.appendChild(newItem);
     }
 
-    function fetchData() {
+
        fetch("http://localhost:3000/data")
            .then(response => response.json())
            .then(data => {
                const labels = data.map(item => item.year)
                const amounts = data.map(item => item.amount)
+               console.log(data)
 
                const ctx = document.getElementById('chart1').getContext('2d');
                const barChart1 = new Chart(ctx, {
@@ -65,9 +66,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
            })
 
-    }
+    fetch("http://localhost:3000/data2")
+        .then(response => response.json())
+        .then(data => {
+            const labels = data.map(item => item.month)
+            const shares = data.map(item => item.totalShares)
+            const comments = data.map(item => item.totalComments)
+            const reactions = data.map(item => item.totalReactions)
+            console.log(data)
 
-    fetchData()
+            const ctx = document.getElementById('chart2').getContext('2d');
+            const barChart1 = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'shares 2022',
+                        data: shares,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    },{
+                        label: 'comments 2022',
+                        data: comments,
+                        borderColor: 'rgba(175, 92, 192, 1)'
+                    },{
+                        label: 'reactions 2022',
+                        data: reactions,
+                        borderColor: 'rgba(75, 192, 92, 1)'
+                    }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                display: false,
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false,
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                boxWidth: 0, // Fjern farveboksen
+                                boxHeight: 0, // Fjern farveboksen
+                            }
+                        }
+                    }
+                }
+            });
+
+
+        })
 
     // Tilføj en ny begivenhed efter 3 sekunder
     setTimeout(() => {

@@ -39,6 +39,26 @@ app.get('/data', (req, res) => {
     });
 });
 
+// Endpoint til at hente data fra databasen
+app.get('/data2', (req, res) => {
+    const q = `SELECT month, sum(shares) as totalShares, sum(reactions) as totalReactions, sum(comments) as totalComments
+    FROM metrics as m
+    JOIN time as t
+    ON m.ccpost_id = t.ccpost_id
+    WHERE year = 2022
+    GROUP BY month
+    ORDER BY month ASC`
+
+    connection.query(q, (error, results) => {
+        if (error) {
+            console.error("Error executing query:", error.message);
+            res.status(500).json({ error: "Database query failed" });
+        } else {
+            res.json(results); // Returner data som JSON
+        }
+    });
+});
+
 // Start server. Skal være under end points.
 app.listen(port, ()=>{
     console.log("Hey guys we are officially LIVE !!!!");
