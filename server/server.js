@@ -27,7 +27,7 @@ connection.connect((err) => {
 
 // Endpoint til at hente data fra databasen
 app.get('/data', (req, res) => {
-    const q = `SELECT * FROM sourcepop WHERE ccpageid = 12362445`;
+    const q = `SELECT year, count(ccpost_id) as amount FROM time GROUP BY year ORDER BY year ASC`;
 
     connection.query(q, (error, results) => {
         if (error) {

@@ -22,7 +22,46 @@ document.addEventListener('DOMContentLoaded', () => {
        fetch("http://localhost:3000/data")
            .then(response => response.json())
            .then(data => {
-                console.log(data)
+               const labels = data.map(item => item.year)
+               const amounts = data.map(item => item.amount)
+
+               const ctx = document.getElementById('chart1').getContext('2d');
+               const barChart1 = new Chart(ctx, {
+                   type: 'bar',
+                   data: {
+                       labels: labels,
+                       datasets: [{
+                           label: 'Antal opslag',
+                           data: amounts,
+                           borderColor: 'rgba(75, 192, 192, 1)',
+                           backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                       }]
+                   },
+                   options: {
+                       scales: {
+                           y: {
+                                beginAtZero: true,
+                               grid: {
+                                    display: false,
+                               }
+                           },
+                           x: {
+                               grid: {
+                                   display: false,
+                               }
+                           }
+                       },
+                       plugins: {
+                           legend: {
+                               labels: {
+                                   boxWidth: 0, // Fjern farveboksen
+                                   boxHeight: 0, // Fjern farveboksen
+                               }
+                           }
+                       }
+                   }
+               });
+
 
            })
 
@@ -36,6 +75,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
 
 });
-
-
-

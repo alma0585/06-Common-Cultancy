@@ -67,3 +67,7 @@ p {
     color: #555;
 }
 
+.charts {
+    height: 50vh;
+    width: 50vw;
+}
