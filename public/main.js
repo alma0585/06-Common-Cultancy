@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
            .then(data => {
                 console.log(data)
 
+
            })
 
     }
@@ -34,5 +35,44 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         addTimelineEvent(2030, 'År 2030', 'Fremtidens æra begynder!');
     }, 3000);
+
+});
+
+const ctx = document.querySelector('#chart1').getContext('2d');
+
+const chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['2022', '2023', '2024'],
+        datasets: [{
+            label: 'Mængde af opslag om Ukraine',
+            data: [1000, 650, 200],
+            backgroundColor: 'rgba(50, 50, 150, 1)',
+            borderColor: 'rgba(50, 50, 150, 0.2)'
+        }],
+
+    },
+    options: {
+        plugins: {
+            legend: {
+                labels: {
+                    boxWidth: 0,
+                    boxHeight: 0,
+                }
+            }
+        },
+        scales: {
+            x: {
+                grid: {
+                    display: false,
+                }
+            },
+            y: {
+                grid: {
+                    display: false,
+                }
+            }
+        }
+    }
 
 });
