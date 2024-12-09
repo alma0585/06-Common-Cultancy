@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tidslinje</title>
+    <title>Interactive Ukraine Timeline</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
-<div class="timeline">
-    <div class="timeline-item" data-year="2000">
-        <div class="timeline-content">
-            <h2>År 2000</h2>
-            <p>Starten på en ny æra.</p>
-        </div>
-    </div>
-    <div class="timeline-item" data-year="2010">
-        <div class="timeline-content">
-            <h2>År 2010</h2>
-            <p>En vigtig milepæl blev nået.</p>
-        </div>
-    </div>
-    <div class="timeline-item" data-year="2020">
-        <div class="timeline-content">
-            <h2>År 2020</h2>
-            <p>Verdensændrende begivenheder fandt sted.</p>
-        </div>
-    </div>
+<div class="parallax-container">
+    <section class="timeline-section" id="section1">
+        <h1>February 2022</h1>
+        <p>Russia invades Ukraine, marking the start of a large-scale conflict.</p>
+        <div class="overlay"></div>
+    </section>
+    <section class="timeline-section" id="section2">
+        <h1>March 2022</h1>
+        <p>Humanitarian crises grow as civilians are displaced across Ukraine.</p>
+    </section>
+    <section class="timeline-section" id="section3">
+        <h1>July 2022</h1>
+        <p>Global engagement with the conflict declines, despite ongoing suffering.</p>
+    </section>
+    <section class="timeline-section" id="section4">
+        <h1>December 2022</h1>
+        <p>International focus shifts, leaving millions of Ukrainians in need.</p>
+    </section>
 </div>
 <script src="main.js"></script>
+<script src="server.js"></script>
 </body>
 </html>
->
+
