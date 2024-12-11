@@ -68,6 +68,7 @@ p {
 }
 
 .charts {
-    height: 50vh;
-    width: 50vw;
+    height: 40vh;
+    width: 40vw;
+    margin: 4rem ;
 }

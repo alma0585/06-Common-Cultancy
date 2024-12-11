@@ -25,7 +25,7 @@ connection.connect((err) => {
     console.log("Connected to the database.");
 });
 
-// Endpoint til at hente data fra databasen
+// Endpoints til at hente data fra databasen
 app.get('/data', (req, res) => {
     const q = `SELECT year, count(ccpost_id) as amount FROM time GROUP BY year ORDER BY year ASC`;
 
@@ -34,17 +34,15 @@ app.get('/data', (req, res) => {
             console.error("Error executing query:", error.message);
             res.status(500).json({ error: "Database query failed" });
         } else {
-            res.json(results); // Returner data som JSON
+            res.json(results);
         }
     });
 });
 
-// Endpoint til at hente data fra databasen
 app.get('/data2', (req, res) => {
     const q = `SELECT month, sum(shares) as totalShares, sum(reactions) as totalReactions, sum(comments) as totalComments
     FROM metrics as m
-    JOIN time as t
-    ON m.ccpost_id = t.ccpost_id
+    JOIN time as t ON m.ccpost_id = t.ccpost_id
     WHERE year = 2022
     GROUP BY month
     ORDER BY month ASC`
@@ -54,7 +52,59 @@ app.get('/data2', (req, res) => {
             console.error("Error executing query:", error.message);
             res.status(500).json({ error: "Database query failed" });
         } else {
-            res.json(results); // Returner data som JSON
+            res.json(results);
+        }
+    });
+});
+
+app.get('/data3', (req, res) => {
+    const q = `SELECT month, sum(shares) as totalShares, sum(reactions) as totalReactions, sum(comments) as totalComments
+    FROM metrics as m
+    JOIN time as t ON m.ccpost_id = t.ccpost_id
+    WHERE year = 2023
+    GROUP BY month
+    ORDER BY month ASC`
+
+    connection.query(q, (error, results) => {
+        if (error) {
+            console.error("Error executing query:", error.message);
+            res.status(500).json({ error: "Database query failed" });
+        } else {
+            res.json(results);
+        }
+    });
+});
+
+app.get('/data4', (req, res) => {
+    const q = `SELECT month, count(ccpost_id) as opslag
+    FROM time
+    WHERE year = 2022
+    GROUP BY month
+    ORDER BY month asc`
+
+    connection.query(q, (error, results) => {
+        if (error) {
+            console.error("Error executing query:", error.message);
+            res.status(500).json({ error: "Database query failed" });
+        } else {
+            res.json(results);
+        }
+    });
+});
+
+app.get('/data5', (req, res) => {
+    const q = `SELECT month, count(ccpost_id) as opslag
+    FROM time
+    WHERE year = 2023
+    GROUP BY month
+    ORDER BY month asc`
+
+    connection.query(q, (error, results) => {
+        if (error) {
+            console.error("Error executing query:", error.message);
+            res.status(500).json({ error: "Database query failed" });
+        } else {
+            res.json(results);
         }
     });
 });

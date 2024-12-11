@@ -81,16 +81,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'shares 2022',
+                        label: 'shares',
                         data: shares,
                         borderColor: 'rgba(75, 192, 192, 1)',
                         backgroundColor: 'rgba(75, 192, 192, 0.2)',
                     },{
-                        label: 'comments 2022',
+                        label: 'comments',
                         data: comments,
                         borderColor: 'rgba(175, 92, 192, 1)'
                     },{
-                        label: 'reactions 2022',
+                        label: 'reactions',
                         data: reactions,
                         borderColor: 'rgba(75, 192, 92, 1)'
                     }
@@ -109,12 +109,132 @@ document.addEventListener('DOMContentLoaded', () => {
                                 display: false,
                             }
                         }
-                    },
-                    plugins: {
-                        legend: {
-                            labels: {
-                                boxWidth: 0, // Fjern farveboksen
-                                boxHeight: 0, // Fjern farveboksen
+                    }
+                }
+            });
+
+
+        })
+
+    fetch("http://localhost:3000/data3")
+        .then(response => response.json())
+        .then(data => {
+            const labels = data.map(item => item.month)
+            const shares = data.map(item => item.totalShares)
+            const comments = data.map(item => item.totalComments)
+            const reactions = data.map(item => item.totalReactions)
+            console.log(data)
+
+            const ctx = document.getElementById('chart3').getContext('2d');
+            const barChart1 = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'shares',
+                        data: shares,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    },{
+                        label: 'comments',
+                        data: comments,
+                        borderColor: 'rgba(175, 92, 192, 1)'
+                    },{
+                        label: 'reactions',
+                        data: reactions,
+                        borderColor: 'rgba(75, 192, 92, 1)'
+                    }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                display: false,
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false,
+                            }
+                        }
+                    }
+                }
+            });
+
+
+        })
+    fetch("http://localhost:3000/data4")
+        .then(response => response.json())
+        .then(data => {
+            const labels = data.map(item => item.month)
+            const opslag = data.map(item => item.opslag)
+            console.log(data)
+
+            const ctx = document.getElementById('chart4').getContext('2d');
+            const barChart1 = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Opslag',
+                        data: opslag,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                display: false,
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false,
+                            }
+                        }
+                    }
+                }
+            });
+
+
+        })
+    fetch("http://localhost:3000/data5")
+        .then(response => response.json())
+        .then(data => {
+            const labels = data.map(item => item.month)
+            const opslag = data.map(item => item.opslag)
+            console.log(data)
+
+            const ctx = document.getElementById('chart5').getContext('2d');
+            const barChart1 = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Opslag',
+                        data: opslag,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                display: false,
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false,
                             }
                         }
                     }
