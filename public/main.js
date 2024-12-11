@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         timeline.appendChild(newItem);
     }
 
-
+        //opslag
        fetch("http://localhost:3000/data")
            .then(response => response.json())
            .then(data => {
@@ -70,9 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             const labels = data.map(item => item.month)
-            const shares = data.map(item => item.totalShares)
-            const comments = data.map(item => item.totalComments)
-            const reactions = data.map(item => item.totalReactions)
+            const interactions = data.map(item => item.interactions)
             console.log(data)
 
             const ctx = document.getElementById('chart2').getContext('2d');
@@ -81,18 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'shares',
-                        data: shares,
+                        label: 'Interaktioner',
+                        data: interactions,
                         borderColor: 'rgba(75, 192, 192, 1)',
                         backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    },{
-                        label: 'comments',
-                        data: comments,
-                        borderColor: 'rgba(175, 92, 192, 1)'
-                    },{
-                        label: 'reactions',
-                        data: reactions,
-                        borderColor: 'rgba(75, 192, 92, 1)'
                     }
                     ]
                 },
@@ -120,9 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             const labels = data.map(item => item.month)
-            const shares = data.map(item => item.totalShares)
-            const comments = data.map(item => item.totalComments)
-            const reactions = data.map(item => item.totalReactions)
+            const opslag = data.map(item => item.interactions)
             console.log(data)
 
             const ctx = document.getElementById('chart3').getContext('2d');
@@ -131,18 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'shares',
-                        data: shares,
+                        label: 'Interaktioner',
+                        data: opslag,
                         borderColor: 'rgba(75, 192, 192, 1)',
                         backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    },{
-                        label: 'comments',
-                        data: comments,
-                        borderColor: 'rgba(175, 92, 192, 1)'
-                    },{
-                        label: 'reactions',
-                        data: reactions,
-                        borderColor: 'rgba(75, 192, 92, 1)'
                     }
                     ]
                 },

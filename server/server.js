@@ -40,7 +40,7 @@ app.get('/data', (req, res) => {
 });
 
 app.get('/data2', (req, res) => {
-    const q = `SELECT month, sum(shares) as totalShares, sum(reactions) as totalReactions, sum(comments) as totalComments
+    const q = `SELECT month, sum(total_interactions) as interactions
     FROM metrics as m
     JOIN time as t ON m.ccpost_id = t.ccpost_id
     WHERE year = 2022
@@ -58,7 +58,7 @@ app.get('/data2', (req, res) => {
 });
 
 app.get('/data3', (req, res) => {
-    const q = `SELECT month, sum(shares) as totalShares, sum(reactions) as totalReactions, sum(comments) as totalComments
+    const q = `SELECT month, sum(total_interactions) as interactions
     FROM metrics as m
     JOIN time as t ON m.ccpost_id = t.ccpost_id
     WHERE year = 2023
