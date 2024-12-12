@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
                        plugins: {
                            legend: {
                                labels: {
+                                   color:'white',
                                    boxWidth: 0, // Fjern farveboksen
                                    boxHeight: 0, // Fjern farveboksen
                                }
@@ -85,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'Interaktioner',
+                        label: 'Interactions on facebook',
                         data: interactions,
                         borderColor: 'rgba(75, 192, 192, 1)',
                         backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -111,7 +112,15 @@ document.addEventListener('DOMContentLoaded', () => {
                                 display: false,
                             }
                         }
+                    },plugins: {
+                    legend: {
+                        labels: {
+                            color:'white',
+                            boxWidth: 0, // Fjern farveboksen
+                            boxHeight: 0, // Fjern farveboksen
+                        }
                     }
+                }
                 }
             });
 
@@ -131,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'Interaktioner',
+                        label: 'Interactions on facebook',
                         data: opslag,
                         borderColor: 'rgba(75, 192, 192, 1)',
                         backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -157,6 +166,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                 display: false,
                             }
                         }
+                    },plugins: {
+                        legend: {
+                            labels: {
+                                color:'white',
+                                boxWidth: 0, // Fjern farveboksen
+                                boxHeight: 0, // Fjern farveboksen
+                            }
+                        }
                     }
                 }
             });
@@ -176,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'Opslag',
+                        label: 'Amount of post through 2022',
                         data: opslag,
                         borderColor: 'rgba(75, 192, 192, 1)',
                         backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -200,6 +217,14 @@ document.addEventListener('DOMContentLoaded', () => {
                             },
                             grid: {
                                 display: false,
+                            }
+                        }
+                    },plugins: {
+                        legend: {
+                            labels: {
+                                color:'white',
+                                boxWidth: 0, // Fjern farveboksen
+                                boxHeight: 0, // Fjern farveboksen
                             }
                         }
                     }
@@ -222,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     labels: labels,
                     datasets: [{
-                        label: 'Opslag',
+                        label: 'Amount of post through 2023',
                         data: opslag,
                         borderColor: 'rgba(75, 192, 192, 1)',
                         backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -246,6 +271,14 @@ document.addEventListener('DOMContentLoaded', () => {
                             },
                             grid: {
                                 display: false,
+                            }
+                        }
+                    },plugins: {
+                        legend: {
+                            labels: {
+                                color:'white',
+                                boxWidth: 0, // Fjern farveboksen
+                                boxHeight: 0, // Fjern farveboksen
                             }
                         }
                     }
