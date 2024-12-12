@@ -15,7 +15,7 @@ body, html {
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
-    background: linear-gradient(to bottom, #d9e4ec, #fff);
+    background: linear-gradient(to bottom, #746C70, #4E4F50);
 }
 
 /* Timeline Sections */
@@ -29,9 +29,13 @@ body, html {
     text-align: center;
     padding: 20px;
     transition: transform 0.5s ease-in-out;
+    color:white;
+
 }
 
-
+.charts{
+    color:white;
+}
 
 #section1{
     background-image: url('https://eu-images.contentstack.com/v3/assets/bltdd43779342bd9107/blt1096ef0717fb849f/638f36063f329b09c9c151dc/Getty_20russia_20ukraine_20conflict.jpg?width=1280&auto=webp&quality=95&format=jpg&disable=upscale');
@@ -51,15 +55,10 @@ body, html {
     background-color: rgba(0, 0, 0, 0.5); /* Change the color and opacity as needed */
 }
 
-
-.timeline-section:nth-child(odd) {
-    background: #f9f9f9;
+#section1 h1::after{
+    color:white;
 }
 
-
-.timeline-section:nth-child(even) {
-    background: #e6f0f3;
-}
 
 h1 {
     font-size: 3rem;
@@ -69,7 +68,7 @@ h1 {
 p {
     font-size: 1.2rem;
     line-height: 1.6;
-    color: #555;
+    color: #E2DED05;
 }
 
 .charts {

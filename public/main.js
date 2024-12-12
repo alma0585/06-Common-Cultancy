@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                    data: {
                        labels: labels,
                        datasets: [{
-                           label: 'Antal opslag',
+                           label: 'Amount of post',
                            data: amounts,
                            borderColor: 'rgba(75, 192, 192, 1)',
                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -41,12 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
                    options: {
                        scales: {
                            y: {
+                               ticks:{
+                                   color:'white'
+                               },
                                 beginAtZero: true,
                                grid: {
                                     display: false,
                                }
                            },
                            x: {
+                               ticks:{
+                                   color:'white'
+                               },
                                grid: {
                                    display: false,
                                }
@@ -89,12 +95,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 options: {
                     scales: {
                         y: {
+                            ticks:{
+                                color:'white'
+                            },
                             beginAtZero: true,
                             grid: {
                                 display: false,
                             }
                         },
                         x: {
+                            ticks:{
+                                color:'white'
+                            },
                             grid: {
                                 display: false,
                             }
@@ -129,12 +141,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 options: {
                     scales: {
                         y: {
+                            ticks:{
+                                color:'white'
+                            },
                             beginAtZero: true,
                             grid: {
                                 display: false,
                             }
                         },
                         x: {
+                            ticks:{
+                                color:'white'
+                            },
                             grid: {
                                 display: false,
                             }
@@ -168,12 +186,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 options: {
                     scales: {
                         y: {
+                            ticks:{
+                                color:'white'
+                            },
                             beginAtZero: true,
                             grid: {
                                 display: false,
                             }
                         },
                         x: {
+                            ticks:{
+                                color:'white'
+                            },
                             grid: {
                                 display: false,
                             }
@@ -195,6 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const barChart1 = new Chart(ctx, {
                 type: 'line',
                 data: {
+
                     labels: labels,
                     datasets: [{
                         label: 'Opslag',
@@ -207,12 +232,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 options: {
                     scales: {
                         y: {
+                            ticks:{
+                                color:'white'
+                            },
                             beginAtZero: true,
                             grid: {
                                 display: false,
                             }
                         },
                         x: {
+                            ticks:{
+                                color:'white'
+                            },
                             grid: {
                                 display: false,
                             }
