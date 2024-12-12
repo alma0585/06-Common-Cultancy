@@ -7,6 +7,12 @@ body, html {
     overflow-x: hidden;
 }
 
+body {
+    background: linear-gradient(to bottom, #746C70, #4E4F50);
+}
+
+
+
 
 /* Parallax Container */
 .parallax-container {
@@ -15,7 +21,7 @@ body, html {
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
-    background: linear-gradient(to bottom, #746C70, #4E4F50);
+
 }
 
 /* Timeline Sections */
@@ -75,4 +81,61 @@ p {
     height: 40vh;
     width: 40vw;
     margin: 4rem ;
+}
+
+
+.ukraine-billede {
+    width: 18rem;
+
+}
+
+#section8 div {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    text-align: left;
+    align-items: center;
+    justify-items: center;
+    max-width: 1300px;
+
+}
+
+.crises-gif {
+    width: 18rem;
+}
+
+#section9 div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-align: left;
+    align-items: center;
+    justify-items: center;
+    max-width: 1300px;
+}
+
+.palestine-img {
+    width: 18rem;
+}
+
+#section10 div {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    text-align: left;
+    align-items: center;
+    justify-items: center;
+    max-width: 1300px;
+}
+
+.war-gif {
+    width: 18rem;
+
+}
+
+#section11 div {
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-align: left;
+    align-items: center;
+    justify-items: center;
+    max-width: 1300px;
 }
