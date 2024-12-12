@@ -27,7 +27,11 @@ connection.connect((err) => {
 
 // Endpoints til at hente data fra databasen
 app.get('/data', (req, res) => {
-    const q = `SELECT year, count(ccpost_id) as amount FROM time GROUP BY year ORDER BY year ASC`;
+    const q = `SELECT year, count(ccpost_id) as amount 
+    FROM time 
+    WHERE year < 2024
+    GROUP BY year 
+    ORDER BY year ASC`;
 
     connection.query(q, (error, results) => {
         if (error) {
