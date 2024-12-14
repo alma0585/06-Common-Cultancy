@@ -54,9 +54,9 @@ p {
 }
 
 .charts {
-    height: 40vh;
-    width: 40vw;
-    margin: 4rem ;
+    height: 50vh;
+    width: 50vw;
+    margin: 5rem ;
 }
 
 #section1{
@@ -110,39 +110,47 @@ p {
 
 #section3 h1{
     display:flex;
-    margin-top:100px;
+    margin-top:150px;
 
 }
 
 #section3 div{
     display: flex;
     flex-direction:row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-align: center;
     align-items: center;
     max-width: 1400px;
     height: auto;
     margin:20px;
-    padding:20px;
+    padding:0;
 }
 
 .ukraine-guys{
-    margin-left:50px;
+    margin-left:30px;
     position: relative;
     overflow: hidden; /* Ensures the image is hidden before animation starts */
-    width: 200rem;
+    width: 210rem;
+    height:auto;
+    padding:80px;
 }
 
 #section4 div{
     display: flex;
     flex-direction:row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-align: center;
     align-items: center;
-    max-width:1200px;
-
+    max-width:1270px;
 }
 
+#section4 p{
+    font-size:1.25rem;
+}
+#chart4{
+    height:80vh;
+    width:80vh;
+}
 
 
 

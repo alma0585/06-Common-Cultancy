@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                    data: {
                        labels: labels,
                        datasets: [{
-                           label: 'Amount of post',
+                           label: 'Amount of Post through the years',
                            data: amounts,
                            borderColor: 'rgba(75, 192, 192, 1)',
                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -193,9 +193,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'Amount of post through 2022',
+                        label: 'Amount of post i 2022',
                         data: opslag,
-                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderColor: '#FFDD00',
                         backgroundColor: 'rgba(75, 192, 192, 0.2)',
                     }
                     ]
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     labels: labels,
                     datasets: [{
-                        label: 'Amount of post through 2023',
+                        label: 'Amount of post in 2023',
                         data: opslag,
                         borderColor: 'rgba(75, 192, 192, 1)',
                         backgroundColor: 'rgba(75, 192, 192, 0.2)',
