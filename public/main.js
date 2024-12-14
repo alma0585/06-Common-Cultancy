@@ -294,21 +294,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
 
 });
-
-
-// intersection observer
-document.addEventListener("DOMContentLoaded", () => {
-    const natoImg = document.querySelector(".nato-img"); // Select the image
-    const section = document.querySelector("#section2"); // Select the section
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                natoImg.classList.add("animate"); // Add the animation class
-                observer.unobserve(section); // Stop observing once animated
-            }
-        });
-    });
-
-    observer.observe(section); // Start observing the section
-});

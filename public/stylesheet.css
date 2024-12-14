@@ -18,6 +18,7 @@ body {
     left: 0;
     z-index: 1000; /* gør at navbar for bliver over de andre contents */
     padding: 10px 0;
+
 }
 
 /* Navbar links */
@@ -28,6 +29,7 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+
 }
 
 .topnav a:hover {
