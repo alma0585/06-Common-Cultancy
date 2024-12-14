@@ -1,4 +1,4 @@
-/* General Reset */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -12,7 +12,55 @@ body {
 }
 
 
-/* Parallax Container */
+.topnav {
+    position: fixed; /* gør at navbar bliver på top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* gør at navbar for bliver over de andre contents */
+    padding: 10px 0;
+}
+
+/* Navbar links */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    color: black;
+}
+
+.topnav input[type=text],
+.search-bar {
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+}
+
+/* Specifik styling af .topnav */
+.topnav input[type=text] {
+    float: right;
+    margin-top: 8px;
+    margin-right: auto;
+}
+
+/* udseende af søgefelt*/
+.search-bar {
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+/* fokus effekt på søgefelt */
+.search-bar:focus {
+    outline: none;
+    background-color: #e0e0e0;
+}
+
+/* for de forskellige paralle sektioner */
 .parallax-container {
     position: relative;
     width: 100%;
@@ -22,7 +70,7 @@ body {
 
 }
 
-/* Timeline Sections */
+/* tidslinje sektioner*/
 .timeline-section {
     position: relative;
     height: 100vh;
@@ -96,10 +144,10 @@ p {
 }
 @keyframes slide-in {
     from {
-        right: -100%; /* Starting position (off-screen) */
+        right: -100%; /* Start position på skærmen*/
     }
     to {
-        right: 5%; /* Final position (on the screen, adjust as needed) */
+        right: 5%; /* Slut position på skærmen */
     }
 }
 
@@ -129,7 +177,7 @@ p {
 .ukraine-guys{
     margin-left:30px;
     position: relative;
-    overflow: hidden; /* Ensures the image is hidden before animation starts */
+    overflow: hidden; /* gør at billedet er gemt indtil det e rpå skærmen */
     width: 210rem;
     height:auto;
     padding:80px;
