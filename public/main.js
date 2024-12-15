@@ -294,3 +294,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
 
 });
+
+// til slide sektionen
+let currentSlide = 0;
+
+function moveSlide(direction) {
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+
+    // Update the current slide index
+    currentSlide += direction;
+
+    // Loop slides if out of bounds
+    if (currentSlide < 0) {
+        currentSlide = totalSlides - 1; // Go to the last slide
+    } else if (currentSlide >= totalSlides) {
+        currentSlide = 0; // Go to the first slide
+    }
+
+    // Move the slides container
+    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
