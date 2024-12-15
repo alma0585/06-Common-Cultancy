@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
                            label: 'Amount of Post through the years',
                            data: amounts,
                            borderColor: 'rgba(75, 192, 192, 1)',
-                           backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                           backgroundColor: ['#121a77', '#c5af00'],
                        }]
                    },
                    options: {

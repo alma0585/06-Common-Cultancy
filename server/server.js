@@ -29,7 +29,7 @@ connection.connect((err) => {
 app.get('/data', (req, res) => {
     const q = `SELECT year, count(ccpost_id) as amount 
     FROM time 
-    WHERE year < 2024
+    WHERE year < 2024 AND year > 2021
     GROUP BY year 
     ORDER BY year ASC`;
 
