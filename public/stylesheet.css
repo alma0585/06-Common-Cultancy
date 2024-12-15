@@ -529,7 +529,7 @@ p {
 }
 
 #section13 {
-    background-color: #4E4F50;
+    background-color: #4e4f50;
     color: #FFFFFF;
     padding: 50px;
     text-align: center;
@@ -539,11 +539,14 @@ p {
 
 .help-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.help-container p {
+    font-size: 18px;
 }
 
 .help-item {
@@ -561,5 +564,6 @@ p {
 
 #section13 a{
     color: #FFFFFF;
+    font-size: 18px;
     text-decoration: none;
 }
