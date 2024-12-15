@@ -235,7 +235,20 @@ p {
     width: 25vw;
 }
 
+#section6 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#infrastructure-img {
+    width: 30vw;
+}
+
 #section7 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: #647C90;
 }
 
