@@ -113,6 +113,28 @@ app.get('/data5', (req, res) => {
     });
 });
 
+app.get('/data6', (req, res) => {
+    const q = `
+    SELECT 
+        month,
+        SUM(CASE WHEN year = 2022 THEN total_interactions ELSE 0 END) AS interactions_2022,
+        SUM(CASE WHEN year = 2023 THEN total_interactions ELSE 0 END) AS interactions_2023
+    FROM metrics AS m
+    JOIN time AS t ON m.ccpost_id = t.ccpost_id
+    WHERE year IN (2022, 2023)
+    GROUP BY month
+    ORDER BY month ASC;`
+
+    connection.query(q, (error, results) => {
+        if (error) {
+            console.error("Error executing query:", error.message);
+            res.status(500).json({ error: "Database query failed" });
+        } else {
+            res.json(results);
+        }
+    });
+});
+
 // Start server. Skal være under end points.
 app.listen(port, ()=>{
     console.log("Hey guys we are officially LIVE !!!!");

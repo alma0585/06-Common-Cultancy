@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         label: 'Amount of post i 2022',
                         data: opslag,
                         borderColor: '#FFDD00',
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        backgroundColor: '#FFDD00',
                     }
                     ]
                 },
@@ -279,6 +279,63 @@ document.addEventListener('DOMContentLoaded', () => {
                                 color:'white',
                                 boxWidth: 0, // Fjern farveboksen
                                 boxHeight: 0, // Fjern farveboksen
+                            }
+                        }
+                    }
+                }
+            });
+
+
+        })
+    fetch("http://localhost:3000/data6")
+        .then(response => response.json())
+        .then(data => {
+            const labels = data.map(item => item.month)
+            const opslag = data.map(item => item.interactions_2022)
+            const opslag2= data.map(item => item.interactions_2023)
+            console.log(data)
+
+            const ctx = document.getElementById('chart6').getContext('2d');
+            const barChart1 = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'interactions 2022',
+                        data: opslag,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 1)',
+                    },{
+                        label: 'interactions 2023',
+                        data: opslag2,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 1)',
+                    }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            ticks:{
+                                color:'white'
+                            },
+                            beginAtZero: true,
+                            grid: {
+                                display: false,
+                            }
+                        },
+                        x: {
+                            ticks:{
+                                color:'white'
+                            },
+                            grid: {
+                                display: false,
+                            }
+                        }
+                    },plugins: {
+                        legend: {
+                            labels: {
+                                color:'white',
                             }
                         }
                     }

@@ -114,7 +114,7 @@ p {
 }
 
 #section1{
-    background-image: url('background5.jpg');
+    background-image: url('assets/background5.jpg');
     background-size: cover;
     background-position:center;
 
@@ -212,6 +212,32 @@ p {
     width:80vh;
 }
 
+.text-container {
+    display: flex;
+    gap: 5rem;
+    width: 60vw;
+    text-align: left;
+    place-items: center;
+}
+
+.text-container p {
+    font-size: 1.3rem;
+}
+
+#section5 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:#746c70;
+}
+
+.donetsk-img {
+    width: 25vw;
+}
+
+#section7 {
+    background-color: #647C90;
+}
 
 
 .ukraine-billede-feb23 {
@@ -314,6 +340,7 @@ p {
     height:auto;
     width: 100%;
     flex-shrink: 0;
+    padding: 20px;
     box-sizing: border-box;
 }
 .slide p {
@@ -372,7 +399,7 @@ p {
 
 
 .slide1 {
-    background-image: url('humanitarian.jpg');
+    background-image: url('assets/humanitarian.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -382,10 +409,11 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
     box-sizing: border-box;
 }
 .slide2 {
-    background-image: url('moving.jpg');
+    background-image: url('assets/moving.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -399,7 +427,7 @@ p {
     box-sizing: border-box;
 }
 .slide3 {
-    background-image: url('living-condition.jpg');
+    background-image: url('assets/living-condition.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -413,7 +441,7 @@ p {
     box-sizing: border-box;
 }
 .slide4 {
-    background-image: url('diplomatic.jpg');
+    background-image: url('assets/diplomatic.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -427,7 +455,7 @@ p {
     box-sizing: border-box;
 }
 .slide5 {
-    background-image: url('mentalhealth.jpg');
+    background-image: url('assets/mentalhealth.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
