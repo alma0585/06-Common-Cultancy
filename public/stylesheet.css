@@ -97,7 +97,9 @@ h1 {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
+
 }
+
 
 p {
     font-size: 1.2rem;
@@ -106,9 +108,9 @@ p {
 }
 
 .charts {
-    height: 50vh;
-    width: 50vw;
-    margin: 5rem ;
+    height: 40vh;
+    width: 40vw;
+    margin: 2rem ;
 }
 
 #section1{
@@ -121,7 +123,7 @@ p {
 #section1 h1{
     font-size: 5rem;
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
     display:flex;
     justify-content:space-between;
@@ -196,7 +198,10 @@ p {
     justify-content: space-evenly;
     text-align: center;
     align-items: center;
-    max-width:1270px;
+    max-width: 1400px;
+    height: auto;
+    margin:20px;
+    padding:0;
 }
 
 #section4 p{
@@ -292,12 +297,14 @@ p {
     justify-content: center;
     text-align: center;
     align-items: center;
-    max-width: 2000px;
-    height: auto;
+    max-width: 1500px;
+    height: 100%;
     margin: 20px;
     padding: 0;
     position: relative;
 }
+
+/* slides til sektion 12 */
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -307,7 +314,6 @@ p {
     height:auto;
     width: 100%;
     flex-shrink: 0;
-    padding: 20px;
     box-sizing: border-box;
 }
 .slide p {
@@ -320,7 +326,16 @@ p {
 
 }
 .slide0{
-    height: 150%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.slide00{
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -328,21 +343,45 @@ p {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-
-
 }
+.slide00 .charts{
+    width: 105%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width:1200px;
+}
+.slide00 p{
+    font-size:1.9rem;
+}
+
+.slide000{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
 .slide1 {
     background-image: url('humanitarian.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 150%;
+    height: 125%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     box-sizing: border-box;
 }
 .slide2 {
@@ -350,7 +389,7 @@ p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 150%;
+    height: 125%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -364,7 +403,7 @@ p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 150%;
+    height: 125%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -378,7 +417,7 @@ p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 150%;
+    height: 125%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -388,11 +427,11 @@ p {
     box-sizing: border-box;
 }
 .slide5 {
-    background-image: url('mental-effect.jpg');
+    background-image: url('mentalhealth.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 150%;
+    height: 125%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -416,7 +455,8 @@ p {
     height: 40px;
     cursor: pointer;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction:row;
+    justify-content: center;
     align-items: center;
 }
 

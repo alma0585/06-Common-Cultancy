@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                    data: {
                        labels: labels,
                        datasets: [{
-                           label: 'Amount of Post through the years',
+                           label: 'Amount of Post made in 2022 and 2023',
                            data: amounts,
                            borderColor: 'rgba(75, 192, 192, 1)',
                            backgroundColor: ['#121a77', '#c5af00'],
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'Interactions on facebook',
+                        label: 'Interactions on facebook in 2022',
                         data: interactions,
                         borderColor: 'rgba(75, 192, 192, 1)',
                         backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'Interactions on facebook',
+                        label: 'Interactions on facebook in 2023',
                         data: opslag,
                         borderColor: 'rgba(75, 192, 192, 1)',
                         backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -315,3 +315,4 @@ function moveSlide(direction) {
     // Move the slides container
     slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
+
