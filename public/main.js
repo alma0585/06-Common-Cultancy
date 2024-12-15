@@ -303,13 +303,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     datasets: [{
                         label: 'interactions 2022',
                         data: opslag,
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        backgroundColor: 'rgba(75, 192, 192, 1)',
+                        borderColor: '#121a77',
+                        backgroundColor: '#121a77',
                     },{
                         label: 'interactions 2023',
                         data: opslag2,
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        backgroundColor: 'rgba(75, 192, 192, 1)',
+                        borderColor: '#c5af00',
+                        backgroundColor: '#c5af00',
                     }
                     ]
                 },

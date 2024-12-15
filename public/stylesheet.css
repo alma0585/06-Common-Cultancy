@@ -95,14 +95,14 @@ h1 {
     font-size: 3rem;
     margin-bottom: 20px;
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-style: normal;
 
 }
 
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 1.6;
     color: #E2DED05;
 }
@@ -110,7 +110,7 @@ p {
 .charts {
     height: 40vh;
     width: 40vw;
-    margin: 2rem ;
+    margin: 2rem;
 }
 
 #section1{
@@ -358,7 +358,7 @@ p {
 }
 .slide p {
     margin: 10px 0;
-    font-size: 18px;
+    font-size: 1.5rem;
     line-height: 1.8;
     text-align: center;
     text-justify: inter-word; /* tilføjer ordentlig mellemrum mellem linjerne*/
@@ -366,7 +366,7 @@ p {
 
 }
 .slide0{
-    height: 100%;
+    height: 125%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -375,7 +375,7 @@ p {
     box-sizing: border-box;
 }
 .slide00{
-    height: 100%;
+    height: 125%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -408,12 +408,27 @@ p {
     padding: 20px;
     box-sizing: border-box;
 }
+.slide000 .charts{
+    width: 105%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    max-width:600px;
 
+}
+.slide000 p{
+    font-size:1.3rem;
+}
 
+.slide000 strong{
+    font-size:1.8rem;
+}
 
 .slide1 {
-    background-image: url('assets/humanitarian.jpg');
-    background-size: cover;
+    background-image: url('assets/humanitarian.png');
+    background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
     height: 125%;
@@ -426,8 +441,8 @@ p {
     box-sizing: border-box;
 }
 .slide2 {
-    background-image: url('assets/moving.jpg');
-    background-size: cover;
+    background-image: url('assets/moving.png');
+    background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
     height: 125%;
@@ -441,8 +456,8 @@ p {
 }
 .slide3 {
     background-image: url('assets/living-condition.jpg');
-    background-size: cover;
-    background-position: center;
+    background-size: 50%;
+    background-position: center 20%;
     background-repeat: no-repeat;
     height: 125%;
     width: 100%;
@@ -454,8 +469,8 @@ p {
     box-sizing: border-box;
 }
 .slide4 {
-    background-image: url('assets/diplomatic.jpg');
-    background-size: cover;
+    background-image: url('assets/diplomatic.png');
+    background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
     height: 125%;
@@ -468,9 +483,9 @@ p {
     box-sizing: border-box;
 }
 .slide5 {
-    background-image: url('assets/mentalhealth.jpg');
-    background-size: cover;
-    background-position: center;
+    background-image: url('assets/mentalhealth2.jpg');
+    background-size: 45%;
+    background-position: center 20%;
     background-repeat: no-repeat;
     height: 125%;
     width: 100%;
@@ -506,7 +521,7 @@ p {
 }
 
 .right-arrow {
-    right: 20px;
+    right: -5px;
 }
 
 .arrow:hover {
@@ -519,6 +534,7 @@ p {
     padding: 50px;
     text-align: center;
     font-family: Arial, sans-serif;
+    line-height:1.5;
 }
 
 .help-container {
@@ -531,7 +547,7 @@ p {
 }
 
 .help-item {
-    background: #647C90;
+    background-color:rgba(100, 124, 144, 0.5);
     border-radius: 8px;
     padding: 20px;
     width: 300px;
