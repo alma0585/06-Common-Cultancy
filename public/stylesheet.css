@@ -110,7 +110,7 @@ h1 {
 
 
 p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     line-height: 1.6;
     color: #E2DED05;
 }
@@ -348,6 +348,7 @@ p {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden;
     position: relative;
     box-sizing: border-box;
 }
