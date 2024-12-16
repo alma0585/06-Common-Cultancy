@@ -522,8 +522,8 @@ p {
 }
 
 #section13 {
-    background-color: #4E4F50;
-    color: #FFFFFF;
+    background-color: #E2DED0;
+    color: black;
     padding: 50px;
     text-align: center;
     font-family: Arial, sans-serif;
@@ -553,7 +553,7 @@ p {
 }
 
 #section13 a{
-    color: #FFFFFF;
+    color: black;
     text-decoration: none;
 }
 
