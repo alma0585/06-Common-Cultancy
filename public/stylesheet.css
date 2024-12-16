@@ -110,7 +110,7 @@ h1 {
 
 
 p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     color: #E2DED05;
 }
@@ -178,6 +178,9 @@ p {
     margin-top:150px;
 
 }
+#section3 p{
+    font-size:1.3rem;
+}
 
 #section3 div{
     display: flex;
@@ -211,7 +214,7 @@ p {
 }
 
 #section4 p{
-    font-size:1.25rem;
+    font-size:1.3rem;
 }
 #chart4{
     height:80vh;
@@ -386,7 +389,7 @@ p {
 }
 .slide p {
     margin: 10px 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.8;
     text-align: left;
     text-justify: inter-word; /* tilføjer ordentlig mellemrum mellem linjerne*/
