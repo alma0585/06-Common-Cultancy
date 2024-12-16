@@ -255,6 +255,10 @@ p {
     text-align: left;
 }
 
+#section6 p {
+    width: 60%;
+}
+
 #infrastructure-img {
     width: 30vw;
 }
