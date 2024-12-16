@@ -264,7 +264,7 @@ p {
 }
 
 #section8 {
-    background-color: #746c70;
+    background-color: #4e4f50;
 }
 
 #section8 div {
@@ -299,7 +299,7 @@ p {
 }
 
 #section10{
-    background-color: #4e4f50;
+    background-color: #746c70;
 }
 
 #section10 div {
@@ -439,6 +439,7 @@ p {
 }
 .slide2 {
     background-image: url('assets/moving.png');
+    background-image: ;
     background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
