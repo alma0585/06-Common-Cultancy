@@ -249,8 +249,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     datasets: [{
                         label: 'Amount of post in 2023',
                         data: opslag,
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgb(255,221,0)',
+                        backgroundColor: 'rgb(255,221,0)',
                     }
                     ]
                 },
