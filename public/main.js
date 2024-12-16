@@ -88,8 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     datasets: [{
                         label: 'Interactions on facebook in 2022',
                         data: interactions,
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgb(255,221,0)',
+                        backgroundColor: 'rgb(255,221,0)',
                     }
                     ]
                 },
