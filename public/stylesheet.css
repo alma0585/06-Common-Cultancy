@@ -439,6 +439,7 @@ p {
 }
 .slide2 {
     background-image: url('assets/moving.png');
+    background-image: ;
     background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
