@@ -18,6 +18,7 @@ body {
     left: 0;
     z-index: 1000; /* gør at navbar for bliver over de andre contents */
     padding: 10px 0;
+
 }
 
 /* Navbar links */
@@ -48,6 +49,13 @@ body {
     margin-top: 8px;
     margin-right: auto;
 }
+
+/* Add this class to hide the navbar */
+.hide-navbar {
+    top: -60px;  /* Adjust this to match the height of your navbar */
+    transition: top 0.3s ease; /* Smooth transition for hiding and showing */
+}
+
 
 /* udseende af søgefelt*/
 .search-bar {
@@ -95,14 +103,14 @@ h1 {
     font-size: 3rem;
     margin-bottom: 20px;
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-style: normal;
 
 }
 
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     color: #E2DED05;
 }
@@ -110,7 +118,7 @@ p {
 .charts {
     height: 40vh;
     width: 40vw;
-    margin: 2rem ;
+    margin: 2rem;
 }
 
 #section1{
@@ -133,7 +141,7 @@ p {
     display: flex;
     flex-direction:row;
     justify-content: space-between;
-    text-align: center;
+    text-align: left;
     align-items: center;
     max-width: 1400px;
     height: auto;
@@ -170,16 +178,18 @@ p {
     margin-top:150px;
 
 }
+#section3 p{
+    font-size:1.3rem;
+}
 
 #section3 div{
     display: flex;
     flex-direction:row;
     justify-content: space-evenly;
-    text-align: center;
+    text-align: left;
     align-items: center;
     max-width: 1400px;
     height: auto;
-    margin:20px;
     padding:0;
 }
 
@@ -196,16 +206,15 @@ p {
     display: flex;
     flex-direction:row;
     justify-content: space-evenly;
-    text-align: center;
+    text-align: left;
     align-items: center;
     max-width: 1400px;
     height: auto;
-    margin:20px;
-    padding:0;
+    padding:20px;
 }
 
 #section4 p{
-    font-size:1.25rem;
+    font-size:1.3rem;
 }
 #chart4{
     height:80vh;
@@ -236,9 +245,23 @@ p {
 }
 
 #section6 {
+    width: 100vw;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+#section6 div {
+    display: flex;
+    place-items: center;
+    width: 80%;
+    text-align: left;
+    gap: 5rem;
+}
+
+#section6 p {
+    width: 70%;
+    font-size: 1.3rem;
 }
 
 #infrastructure-img {
@@ -250,6 +273,7 @@ p {
     justify-content: space-evenly;
     align-items: center;
     background-color: #647C90;
+    padding:20px;
 }
 
 
@@ -264,7 +288,7 @@ p {
 }
 
 #section8 {
-    background-color: #746c70;
+    background-color: #4e4f50;
 }
 
 #section8 div {
@@ -274,6 +298,7 @@ p {
     align-items: center;
     justify-items: center;
     max-width: 1300px;
+    padding:20px;
 
 }
 
@@ -292,6 +317,7 @@ p {
     align-items: center;
     justify-items: center;
     max-width: 1300px;
+    padding:20px;
 }
 
 .ukraine-billede-oct23 {
@@ -299,7 +325,7 @@ p {
 }
 
 #section10{
-    background-color: #4e4f50;
+    background-color: #746c70;
 }
 
 #section10 div {
@@ -309,6 +335,7 @@ p {
     align-items: center;
     justify-items: center;
     max-width: 1300px;
+    padding:20px;
 }
 
 .ukraine-billede-dec23 {
@@ -328,6 +355,7 @@ p {
     align-items: center;
     justify-items: center;
     max-width: 1300px;
+    padding:20px;
 }
 
 #section12 {
@@ -336,53 +364,64 @@ p {
     justify-content: center;
     text-align: center;
     align-items: center;
-    max-width: 1500px;
+    width: 100%;
     height: 100%;
-    margin: 20px;
+    margin: 0;
     padding: 0;
+    overflow: hidden;
     position: relative;
+    box-sizing: border-box;
 }
 
 /* slides til sektion 12 */
 .slides {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 300%;
+    width: 100%;
+    height:100%;
 }
 .slide {
-    height:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100%;
     width: 100%;
     flex-shrink: 0;
-    padding: 20px;
     box-sizing: border-box;
 }
 .slide p {
     margin: 10px 0;
-    font-size: 18px;
+    font-size: 1.3rem;
     line-height: 1.8;
-    text-align: center;
+    text-align: left;
     text-justify: inter-word; /* tilføjer ordentlig mellemrum mellem linjerne*/
     hyphens:auto;
 
 }
 .slide0{
-    height: 100%;
+    height: 125%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    text-align: left;
+}
+
+.slide00 strong{
+    font-size:3rem;
 }
 .slide00{
-    height: 100%;
+    height: 125%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     box-sizing: border-box;
+    position:static;
+    text-align: left;
 }
 .slide00 .charts{
     width: 105%;
@@ -390,7 +429,6 @@ p {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    padding: 20px;
     box-sizing: border-box;
     max-width:1200px;
 }
@@ -399,21 +437,33 @@ p {
 }
 
 .slide000{
-    height: 100%;
-    width: 100%;
+    height: 40%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide000 .charts{
+    width: 105%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     box-sizing: border-box;
+    max-width:600px;
+
+}
+.slide000 p{
+    font-size:1.3rem;
 }
 
+.slide000 strong{
+    font-size:1.8rem;
+}
 
-
-.slide1 {
-    background-image: url('assets/humanitarian.jpg');
-    background-size: cover;
+.slide1 {;
+    background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
     height: 125%;
@@ -422,12 +472,18 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     box-sizing: border-box;
 }
+
+.slide1 img {
+    position: absolute;
+    width: 100vw;
+    height: 130vh;
+    z-index: -1;
+}
+
 .slide2 {
-    background-image: url('assets/moving.jpg');
-    background-size: cover;
+    background-size: 68%;
     background-position: center;
     background-repeat: no-repeat;
     height: 125%;
@@ -436,52 +492,75 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.slide3 {
-    background-image: url('assets/living-condition.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 125%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.slide4 {
-    background-image: url('assets/diplomatic.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 125%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.slide5 {
-    background-image: url('assets/mentalhealth.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 125%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
     box-sizing: border-box;
 }
 
+.slide2 img {
+    position: absolute;
+    width: 100vw;
+    height: 110vh;
+    z-index: -1;
+}
+
+.slide3 {
+    background-size: 57%;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    height: 125%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.slide3 img {
+    position: absolute;
+    width: 100vw;
+    height: 120vh;
+    z-index: -1;
+}
+
+.slide4 {
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 125%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.slide4 img {
+    position: absolute;
+    width: 100vw;
+    height: 120vh;
+    z-index: -1;
+}
+
+.slide5 {
+    background-size: 57%;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    height: 125%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.slide5 img {
+    position: absolute;
+    width: 100vw;
+    height: 140vh;
+    z-index: -1;
+}
 
 .arrow {
     position: absolute;
@@ -499,14 +578,15 @@ p {
     flex-direction:row;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .left-arrow {
-    left: 20px;
+    left: 50px;
 }
 
 .right-arrow {
-    right: 20px;
+    right: 50px;
 }
 
 .arrow:hover {
@@ -514,24 +594,24 @@ p {
 }
 
 #section13 {
-    background-color: #4E4F50;
-    color: #FFFFFF;
+    background-color: #E2DED0;
+    color: black;
     padding: 50px;
     text-align: center;
     font-family: Arial, sans-serif;
-}
 
+}
 .help-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 65px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 65px auto;
 }
 
 .help-item {
-    background: #647C90;
+    background-color:rgba(100, 124, 144, 0.5);
     border-radius: 8px;
     padding: 20px;
     width: 300px;
@@ -544,6 +624,10 @@ p {
 }
 
 #section13 a{
-    color: #FFFFFF;
+    color: black;
     text-decoration: none;
+    font-size: 1.3rem;
+}
+#section13 ul{
+    font-size:1.3rem;
 }

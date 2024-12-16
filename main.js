@@ -88,8 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     datasets: [{
                         label: 'Interactions on facebook in 2022',
                         data: interactions,
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgb(255,221,0)',
+                        backgroundColor: 'rgb(255,221,0)',
                     }
                     ]
                 },
@@ -142,8 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     datasets: [{
                         label: 'Interactions on facebook in 2023',
                         data: opslag,
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: '#FFDD00',
+                        backgroundColor: '#FFDD00',
                     }
                     ]
                 },
@@ -249,8 +249,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     datasets: [{
                         label: 'Amount of post in 2023',
                         data: opslag,
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgb(255,221,0)',
+                        backgroundColor: 'rgb(255,221,0)',
                     }
                     ]
                 },
@@ -303,13 +303,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     datasets: [{
                         label: 'interactions 2022',
                         data: opslag,
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        backgroundColor: 'rgba(75, 192, 192, 1)',
+                        borderColor: '#121a77',
+                        backgroundColor: '#121a77',
                     },{
                         label: 'interactions 2023',
                         data: opslag2,
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        backgroundColor: 'rgba(75, 192, 192, 1)',
+                        borderColor: '#c5af00',
+                        backgroundColor: '#c5af00',
                     }
                     ]
                 },
@@ -372,4 +372,3 @@ function moveSlide(direction) {
     // Move the slides container
     slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
-
