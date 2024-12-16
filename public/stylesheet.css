@@ -341,19 +341,19 @@ p {
     margin: 20px;
     padding: 0;
     position: relative;
+    box-sizing: border-box;
 }
 
 /* slides til sektion 12 */
 .slides {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 300%;
+    width: 400%;
+    height:100%;
 }
 .slide {
     height:auto;
     width: 100%;
     flex-shrink: 0;
-    padding: 20px;
     box-sizing: border-box;
 }
 .slide p {
@@ -478,7 +478,7 @@ p {
 }
 .slide5 {
     background-image: url('assets/mentalhealth2.jpg');
-    background-size: 45%;
+    background-size: 60%;
     background-position: center 20%;
     background-repeat: no-repeat;
     height: 125%;

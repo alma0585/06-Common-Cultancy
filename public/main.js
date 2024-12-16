@@ -142,8 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     datasets: [{
                         label: 'Interactions on facebook in 2023',
                         data: opslag,
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: '#FFDD00',
+                        backgroundColor: '#FFDD00',
                     }
                     ]
                 },
