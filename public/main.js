@@ -372,4 +372,3 @@ function moveSlide(direction) {
     // Move the slides container
     slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
-
