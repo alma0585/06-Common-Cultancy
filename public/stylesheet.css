@@ -141,7 +141,7 @@ p {
     display: flex;
     flex-direction:row;
     justify-content: space-between;
-    text-align: center;
+    text-align: left;
     align-items: center;
     max-width: 1400px;
     height: auto;
@@ -183,7 +183,7 @@ p {
     display: flex;
     flex-direction:row;
     justify-content: space-evenly;
-    text-align: center;
+    text-align: left;
     align-items: center;
     max-width: 1400px;
     height: auto;
@@ -203,7 +203,7 @@ p {
     display: flex;
     flex-direction:row;
     justify-content: space-evenly;
-    text-align: center;
+    text-align: left;
     align-items: center;
     max-width: 1400px;
     height: auto;
@@ -242,9 +242,17 @@ p {
 }
 
 #section6 {
+    width: 100vw;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+#section6 div {
+    display: flex;
+    place-items: center;
+    width: 80%;
+    text-align: left;
 }
 
 #infrastructure-img {
@@ -376,7 +384,7 @@ p {
     margin: 10px 0;
     font-size: 1.5rem;
     line-height: 1.8;
-    text-align: center;
+    text-align: left;
     text-justify: inter-word; /* tilføjer ordentlig mellemrum mellem linjerne*/
     hyphens:auto;
 
@@ -389,6 +397,7 @@ p {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    text-align: left;
 }
 
 .slide00 strong{
@@ -403,6 +412,7 @@ p {
     align-items: center;
     box-sizing: border-box;
     position:static;
+    text-align: left;
 }
 .slide00 .charts{
     width: 105%;
