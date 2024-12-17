@@ -328,6 +328,9 @@ p {
     background-color: #746c70;
 }
 
+#section10 strong{
+    font-size:1.7rem;
+}
 #section10 div {
     display: grid;
     grid-template-columns: 1fr 1fr;
